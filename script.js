@@ -1,5 +1,6 @@
 const unformattedTextArea = document.getElementById("unformatted-text");
 const formattedTextArea = document.getElementById("formatted-text");
+const xIcon = document.querySelector(".fa-xmark");
 const copyIcon = document.querySelector(".copy-icon");
 const copyTextTooltip = document.querySelector(".tooltiptext");
 
@@ -21,6 +22,11 @@ unformattedTextArea.addEventListener("input", () => {
   const unformattedText = unformattedTextArea.value;
   const formattedText = formatText(unformattedText);
   formattedTextArea.value = formattedText;
+});
+
+xIcon.addEventListener("click", () => {
+  unformattedTextArea.value = "";
+  formattedTextArea.value = "";
 });
 
 copyIcon.addEventListener("click", () => {
