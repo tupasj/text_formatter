@@ -87,8 +87,23 @@ textarea {
   transition: visibility 0.3s ease-in-out;  /* Added transition for smooth visibility change */
 }
 
+.tooltiptext-cut {
+  margin-right: 4px;
+  visibility: hidden;
+  transition: visibility 0.3s ease-in-out;  /* Added transition for smooth visibility change */
+}
+
+.tooltip-container {
+  display: flex;
+  gap: 12px;
+}
+
 /* Tooltip container hover effect (unchanged) */
-.tooltip-container:hover .tooltiptext {
+.copy-button-wrapper:hover .tooltiptext {
+  visibility: visible;
+}
+
+.cut-button-wrapper:hover .tooltiptext-cut {
   visibility: visible;
 }
 
@@ -97,11 +112,24 @@ textarea {
   color: green; /* Change text color to green on copy */
 }
 
+.tooltiptext-cut.cut {
+  color: green;
+}
+
 .copy-icon {
   font-size: 20px;
   color: #333;
 }
 
 .copy-icon:hover {
+  color: #007bff;
+}
+
+.cut-icon {
+  font-size: 20px;
+  color: #333;
+}
+
+.cut-icon:hover {
   color: #007bff;
 }

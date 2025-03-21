@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Formatter</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-XHhxslk-rYBLvkQvZjw7tTUEqbKMArdQARQXRbCawxD5aAo4NkhˑxwWExWBoCWmJbnoQZaOmtDKjtRaOMzcxVA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,7 +16,7 @@
         <div class="input-field">
             <div class="unformatted-text-container">
                 <span class="unformatted-text-span">Enter text here</span>
-              <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark"></i>
             </div>
             <textarea id="unformatted-text" rows="10"></textarea>
         </div>
@@ -25,8 +24,14 @@
             <div class="formatted-text-container">
                 <span class="formatted-text-span">Formatted text</span>
                 <div class="tooltip-container">
-                    <span class="tooltiptext">Copy text</span>
-                    <i class="fa-solid fa-copy copy-icon tooltip-text"></i>
+                    <div class="copy-button-wrapper">
+                        <span class="tooltiptext">Copy text</span>
+                        <i class="fa-solid fa-copy copy-icon tooltip-text"></i>
+                    </div>
+                    <div class="cut-button-wrapper">
+                        <span class="tooltiptext-cut">Cut text</span>
+                        <i class="fa-solid fa-scissors cut-icon"></i>
+                    </div>
                 </div>
             </div>
             <textarea id="formatted-text" rows="10" readonly></textarea>
